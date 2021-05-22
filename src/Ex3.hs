@@ -6,7 +6,7 @@ and [a] = a
 and (x:xs) = if (x == True) then and xs
              else False
 
---- concat lists in a given list -----
+--- concat lists into a given list -----
 concat :: [[a]] -> [a]
 concat [] = []
 concat [a] = a
@@ -17,7 +17,7 @@ replicate :: Int -> a -> [a]
 replicate 0 a = []
 replicate n a = [a] ++ replicate (n-1) a
 
---- return index of a element in a list ----
+--- return index of an element in a list ----
 (!!) :: [a] -> Int -> a
 (!!) [] n = error "Wrong index!!"
 (!!) (x:xs) 0 = x
